@@ -15,7 +15,7 @@ const employee = [];
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-function teamMember() {
+function addteamMember() {
     inquirer.prompt([
         {
             type: "input",
@@ -79,7 +79,7 @@ function teamMember() {
                 addtoHTML(newEmployee)
                 .then(function(){
                     if(addMembers === "yes"){
-                        teamMember();
+                        addteamMember();
                     } else{
                         endHtml();
                     }
@@ -101,11 +101,6 @@ function teamMember() {
 
 }
 
-function init(){
-    createHTML()
-    teamMember()
-}
-   
 
 
 
@@ -244,8 +239,11 @@ function addtoHTML(team) {
 
 
 
+function init(){
+    createHTML()
+    addteamMember()
 }
-
+   
 
 
 
