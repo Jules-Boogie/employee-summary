@@ -65,7 +65,74 @@ function addtoHTML(team){
     const email = team.getEmail();
     const id = team.getId();
     const role = team.getRole();
+    let teamInfo = "";
+
+    if(role === "Engineer"){
+        const gitHub = member.getGithub();
+        teamInfo = `<div class="col">
+        <div class="card mx-auto mb-3">
+        <ul class="list-group">
+        <li class="list-group-item active">Engineer</li>
+        <li class="list-group-item">ID:${id}</li>
+        <li class="list-group-item">Github: ${gitHub}</li>
+        <li class="list-group-item">Email: ${email}</li>
+      </ul>
+      </div> `
+
+    } else if(role === "Manager"){
+        const officeNumber = team.getofficeNumber();
+        teamInfo = `
+        <div class="col">
+        <div class="card mx-auto mb-3">
+        <ul class="list-group">
+        <li class="list-group-item active">Manager</li>
+        <li class="list-group-item">ID:${id}</li>
+        <li class="list-group-item">Office Phone: ${officeNumber}</li>
+        <li class="list-group-item">Email: ${email}</li>
+      </ul>
+      </div> 
+        `
+    } else {
+        const school = team.getSchool();
+        teamInfo = `
+        <div class="col">
+        <div class="card mx-auto mb-3">
+        <ul class="list-group">
+        <li class="list-group-item active">Manager</li>
+        <li class="list-group-item">ID:${id}</li>
+        <li class="list-group-item">Github: ${gitHub}</li>
+        <li class="list-group-item"> School: ${school}</li>
+        <li class="list-group-item">Email: ${email}</li>
+      </ul>
+      </div> 
+        `
+
+
+    }
+
+    fs.appendFile("team.html", teamInfo, function(err){
+        if (err) {
+            throw err;
+        }
+        console.log("successfully wrote to team.html");
+
+    })
+
+
+
+
+
     
+
+
+
+
+
+
+
+}
+
+   
 
 
 
