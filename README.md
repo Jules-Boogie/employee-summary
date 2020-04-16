@@ -4,7 +4,7 @@ The challenge is to build a Node CLI that takes in information about employees a
 
 ## Employee Dashboard Generator Video
 
-[![site video](https://github.com/Jules-Boogie/employee-summary/blob/master/Assets/Capture.PNG)]({https://github.com/Jules-Boogie/employee-summary/blob/master/Assets/bandicam%202020-04-15%2018-09-57-501.mp4} "Readme")
+[![site video](https://github.com/Jules-Boogie/employee-summary/blob/master/Assets/bandicam%202020-04-15%2018-09-57-501.mp4)
 
 
 
