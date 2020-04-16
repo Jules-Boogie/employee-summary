@@ -3,14 +3,10 @@ var Employee = require("./Employee");
 
 
 class Intern extends Employee{
-    constructor(name, id, email, github, school){
+    constructor(name, id, email, school){
         super(name,id,email);
-        this.github = github;
+        
         this.school = school;
-    }
-    getGithub(){
-        return this.github;
-
     }
 
     getSchool(){
