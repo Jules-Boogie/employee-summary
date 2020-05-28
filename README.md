@@ -32,6 +32,7 @@ The challenge is to build a Node CLI that takes in information about employees a
 
 
 ## Code Snippet
+The code below utilizes the npm package, inquirerjs, to prompt a manager to add members to his team. The User is given the choice between an Engineer, an Intern, and a Manager. The results of this inquirer prompt is used to generate an HTML file to display the information. Please see above photo for generated team profile. 
 ```
 function addTeamMember() {
     inquirer.prompt([
